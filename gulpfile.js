@@ -41,7 +41,7 @@ gulp.task('styles', function(){
       extname: ".css"
     }
   ))
-  .pipe(maps.write())
+  .pipe(maps.write('/'))
   .pipe(gulp.dest('./App/'))
 });
 
