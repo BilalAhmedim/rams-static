@@ -79,12 +79,12 @@
 
     li{
       display: block;
+      position: relative;
       a{
         text-decoration: none;
         display: block;
         padding: 8px 16px;
         color: #111;
-        position: relative;
         &::after{
           content: "";
           width: 100%;
@@ -105,14 +105,16 @@
     }
 
     &__sub{
-      height: 0;
+      height: 0px;
       overflow: hidden;
       display: none;
+      transition: all .3s ease-in-out;
 
       &--is-dropped{
         height: 100%;
         display: block;
         overflow: visible;
+        transition: all .3s ease-in-out;
       }
     }
   }

@@ -455,6 +455,7 @@ body{
 
 .navigation .nav-menu__item li{
       display: block;
+      position: relative;
     }
 
 .navigation .nav-menu__item li a{
@@ -462,7 +463,6 @@ body{
         display: block;
         padding: 8px 16px;
         color: #111;
-        position: relative;
       }
 
 .navigation .nav-menu__item li a::after{
@@ -489,14 +489,16 @@ body{
       }
 
 .navigation .nav-menu__item__sub{
-      height: 0;
+      height: 0px;
       overflow: hidden;
       display: none;
+      transition: all .3s ease-in-out;
     }
 
 .navigation .nav-menu__item__sub--is-dropped{
         height: 100%;
         display: block;
         overflow: visible;
+        transition: all .3s ease-in-out;
       }
 /*# sourceMappingURL=style.css.map */

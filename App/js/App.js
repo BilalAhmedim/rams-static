@@ -1,13 +1,13 @@
 // navigation on click
 var
 nav_icon = document.querySelector('.nav-menu'),
-nav_expand = document.querySelector('.nav-menu__item__sub'),
-nav_sub__menu = document.querySelector('.navigation ul.nav-menu__item li a')
+nav_expand = document.querySelector('ul.nav-menu__item__sub'),
+nav_sub__menu = document.querySelectorAll('ul li a.drop')
 ;
 
 function navExpand(){
   if(nav_icon.classList[1] == undefined){
-    nav_icon.classList.add('nav-menu--close');
+    nav_icon.classList.add('nav-menu--close');  
   }else{
     nav_icon.classList.remove('nav-menu--close');
   }
@@ -15,12 +15,12 @@ function navExpand(){
 
 nav_icon.addEventListener('click', navExpand);
 
-function nav_menu(e){
-  console.log(nav_sub__menu)
-  if(nav_expand.classList[1] == undefined){
-    this.e.classList.add('nav-menu__item__sub--is-dropped');
+function nav_menu(){
+  if(this.nextElementSibling.classList[1] == undefined){
+    this.nextElementSibling.classList.add('nav-menu__item__sub--is-dropped');
   }else{
-    this.e.classList.remove('nav-menu__item__sub--is-dropped');
+    this.nextElementSibling.classList.remove('nav-menu__item__sub--is-dropped');
   }
 }
-nav_sub__menu.addEventListener('click', nav_menu);
+
+nav_sub__menu.forEach(elem => elem.addEventListener('click', nav_menu));
