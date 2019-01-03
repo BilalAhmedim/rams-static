@@ -362,9 +362,33 @@ body{
   padding: 0 18px;
 }
 
+img{
+  width: 100%;
+  height: auto;
+}
+
+.main-header{
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navigation{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  height: 66px;
+  background: #fff;
+
+}
+
 .navigation .brand{
     width: 66px;
     height: 66px;
+    margin-left: 20px;
     overflow: hidden;
     display: inline-block;
   }
@@ -380,8 +404,8 @@ body{
     width: 25px;
     height: 19px;
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
     transition: height .3s ease-in-out;
   }
@@ -446,11 +470,37 @@ body{
                 transform: rotate(-45deg) scalex(1.25);
       }
 
+.navigation .nav-menu__content{
+      width: 100%;
+      height: 0;
+      position: fixed;
+      background: #fff;
+      margin: -4px;
+      padding: 0;
+      opacity: 0;
+      -webkit-transform: scale(.99);
+              transform: scale(.99);
+      transition: all .3s ease-in-out;
+    }
+
+.navigation .nav-menu__content--show{
+        height: 100%;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+        overflow: hidden;
+      }
+
 .navigation .nav-menu__item{
+    height: 0;
+    opacity: 0;
+    -webkit-transform: scale(.9);
+            transform: scale(.9);
     width: 200px;
     overflow: hidden;
     padding: 0;
     margin: 0 auto;
+    transition: all .3s ease-in-out;
   }
 
 .navigation .nav-menu__item li{
@@ -463,6 +513,7 @@ body{
         display: block;
         padding: 8px 16px;
         color: #111;
+        position: relative;
       }
 
 .navigation .nav-menu__item li a::after{
@@ -489,16 +540,21 @@ body{
       }
 
 .navigation .nav-menu__item__sub{
-      height: 0px;
+      height: 0;
       overflow: hidden;
-      display: none;
+      clear: both;
       transition: all .3s ease-in-out;
     }
 
 .navigation .nav-menu__item__sub--is-dropped{
-        height: 100%;
-        display: block;
+        height: auto;
         overflow: visible;
-        transition: all .3s ease-in-out;
       }
+
+.navigation .nav-menu__item--is-expend{
+      opacity: 1;
+      height: 100%;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
 /*# sourceMappingURL=style.css.map */
