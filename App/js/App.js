@@ -1,4 +1,4 @@
-// navigation on click
+// navigation Target Classes
 var
 nav_icon = document.querySelector('.nav-menu'),
 nav_expanded = document.querySelector('.nav-menu__item'),
@@ -6,7 +6,7 @@ nav_content_hide = document.querySelector('.nav-menu__content'),
 nav_content__show = document.querySelector('.nav-menu__content--show'),
 nav_sub__menu = document.querySelectorAll('ul li a.drop')
 ;
-
+// Navigation Menu Icon
 function navExpand(){
   if(nav_icon.classList[1] == undefined){
     nav_icon.classList.add('nav-menu--close');
@@ -20,8 +20,10 @@ function navExpand(){
   }
 }
 
-nav_icon.addEventListener('click', navExpand);
+nav_icon.addEventListener('click', navExpand);  // Event Listener
 
+
+// Navigation Items DrpoDown Menu
 function nav_menu(){
   if(this.nextElementSibling.classList[1] == undefined){
     this.nextElementSibling.classList.add('nav-menu__item__sub--is-dropped');
@@ -30,4 +32,10 @@ function nav_menu(){
   }
 }
 
-nav_sub__menu.forEach(elem => elem.addEventListener('click', nav_menu));
+nav_sub__menu.forEach(elem => elem.addEventListener('click', nav_menu)); // Event Listener
+
+//////////////////////////////
+////////End Navigation////////
+//////////////////////////////
+
+
