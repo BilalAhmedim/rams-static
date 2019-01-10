@@ -1,7 +1,9 @@
 .main-header{
   background: #fff;
   width: 100%;
+  height: 66px;;
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -84,20 +86,22 @@
       }
     }
     &__content{
-      width: 100%;
+      width: 110%;
       height: 0;
       position: fixed;
       background: #fff;
-      margin: -4px;
+      margin: -8px;
       padding: 0;
       opacity: 0;
       transform: scale(.99);
       transition: all .3s ease-in-out;
       &--show{
-        height: 100%;
+        height: 100vh;
         transform: scale(1);
-        opacity: 1;
+        opacity: .9;
         overflow: hidden;
+        display: block;
+        z-index: 9999;
       }
     }
   }
@@ -143,7 +147,6 @@
     &__sub{
       height: 0;
       overflow: hidden;
-      clear: both;
       transition: all .3s ease-in-out;
 
       &--is-dropped{
