@@ -369,6 +369,33 @@ img{
   height: auto;
 }
 
+.section-header{
+  text-align: center;
+}
+
+@media (min-width: 768px){
+
+.section-header{
+    width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #D7B356
+}
+  }
+
+@media (min-width: 992px){
+
+.section-header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 10px
+}
+  }
+
 .main-header{
   background: rgba(255, 255, 255, .9);
   width: 100%;
@@ -400,6 +427,12 @@ img{
       text-indent: -9999px;
       background: url('./assets/logo.png');
     }
+
+.navigation .brand__graphic--no-indent{
+        width: 100%;
+        height: 100%;
+        text-indent: 0;
+      }
 
 .navigation .nav-menu{
     width: 25px;
@@ -517,6 +550,7 @@ img{
         padding: 8px 16px;
         color: #111;
         position: relative;
+        cursor: pointer;
       }
 
 .navigation .nav-menu__item li a::after{
@@ -572,33 +606,6 @@ img{
 .gallery{
     margin-top: 60px
 }
-  }
-
-.gallery .section-header{
-    text-align: center;
-  }
-
-@media (min-width: 768px){
-
-.gallery .section-header{
-      width: 90%;
-      text-align: left;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #D7B356
-  }
-  }
-
-@media (min-width: 992px){
-
-.gallery .section-header{
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 35px;
-      margin-bottom: 10px
-  }
   }
 
 .gallery .row, .gallery .col-md-3{
