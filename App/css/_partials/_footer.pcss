@@ -1,0 +1,71 @@
+.footer{
+  margin: 20px 0 0 0;
+  padding: 60px 0;
+  overflow: hidden;
+
+  &__divider{
+    margin-bottom: 60px;
+    @mixin atMedium{
+      margin-bottom: 0;
+    }
+  }
+
+  &__align{
+    &--one{
+      width: 70px;
+      margin: 0 auto;
+      display:block;
+      list-style: none;
+      padding: 0;
+    }
+    &--two{
+      width: 150px;
+      margin: 0 auto;
+      display:block;
+      list-style: none;
+      padding: 0;
+      ul{
+        display: block;
+        list-style: none;
+        padding-left: 25px;
+      }
+    }
+    &--three{
+      width: 25px;
+      margin: 0 auto;
+      display:block;
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  &__nav__copyright{
+    width: 100%;
+    height: 100%;
+    .brand{
+      width: 66px;
+      height: 66px;
+      margin-left: 20px;
+      overflow: hidden;
+      display: inline-block;
+      &__graphic{
+        width: 100%;
+        height: 100%;
+        text-indent: -9999px;
+        background: url('./assets/logo.png');
+        &--no-indent{
+          width: 100%;
+          height: 100%;
+          text-indent: 0;
+        }
+      }
+      &__text{
+        h6{
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+}
