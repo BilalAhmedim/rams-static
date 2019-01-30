@@ -719,14 +719,36 @@ img{
 
 .footer{
   margin: 20px 0 0 0;
-  padding: 60px 0;
   overflow: hidden;
 
 
 }
 
+@media (min-width: 768px){
+
+.footer{
+    padding: 60px 0
+
+
+}
+  }
+
+@media (min-width: 768px){
+
+.footer .rams-pages,.footer .social-pages{
+      margin-top: 50px
+  }
+  }
+
+@media (min-width: 992px){
+
+.footer .rams-pages,.footer .social-pages{
+      margin-top: 0
+  }
+  }
+
 .footer__divider{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
 @media (min-width: 768px){
@@ -734,6 +756,17 @@ img{
 .footer__divider{
       margin-bottom: 0
   }
+  }
+
+.footer__divider h5{
+      margin-bottom: 10px;
+    }
+
+@media (min-width: 768px){
+
+.footer__divider h5{
+        margin-bottom: 20px
+    }
   }
 
 .footer__align--one{
@@ -761,10 +794,23 @@ img{
 .footer__align--three{
       width: 25px;
       margin: 0 auto;
-      display:block;
+      display: inline;
       list-style: none;
       padding: 0;
     }
+
+.footer__align--three li{
+        display: inline-block;
+        padding-right: 20px;
+      }
+
+@media (min-width: 992px){
+
+.footer__align--three li{
+          display: block;
+          text-align: center
+      }
+  }
 
 .footer__nav__copyright{
     width: 100%;

@@ -1,12 +1,29 @@
 .footer{
   margin: 20px 0 0 0;
-  padding: 60px 0;
   overflow: hidden;
+  @mixin atMedium{
+    padding: 60px 0;
+  }
+
+  .rams-pages,.social-pages{
+    @mixin atMedium{
+      margin-top: 50px;
+    }
+    @mixin atLarge{
+      margin-top: 0;
+    }
+  }
 
   &__divider{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     @mixin atMedium{
       margin-bottom: 0;
+    }
+    h5{
+      margin-bottom: 10px;
+      @mixin atMedium{
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -33,9 +50,17 @@
     &--three{
       width: 25px;
       margin: 0 auto;
-      display:block;
+      display: inline;
       list-style: none;
       padding: 0;
+      li{
+        display: inline-block;
+        padding-right: 20px;
+        @mixin atLarge{
+          display: block;
+          text-align: center;
+        }
+      }
     }
   }
 
